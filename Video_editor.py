@@ -1,9 +1,9 @@
 import os
-from scripts import ffmpeg_parser
+import scripts.ffmpeg_parser as parser
 
 menu = open("menu.txt", "r").read()
 exit = False
-current_dir = os.getcwd()
+
 while not exit:
     files = os.listdir()
     count = 0
@@ -22,4 +22,4 @@ while not exit:
         exit = True
         break
     if option == 1:
-        ffmpeg_parser.parse_input_file(current_dir, filename)
+        parser.parse_input_file(filename)
