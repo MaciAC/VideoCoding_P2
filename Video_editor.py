@@ -1,5 +1,7 @@
 import os
 import scripts.ffmpeg_parser as parser
+import scripts.resize as resize
+import scripts.transcode as transcode
 
 menu = open("menu.txt", "r").read()
 exit = False
@@ -21,5 +23,14 @@ while not exit:
     if option == 0:
         exit = True
         break
+
     if option == 1:
         parser.parse_input_file(filename)
+
+    if option == 2:
+        w = int(input("Enter output width value:\n"))
+        h = int(input("Enter output height value:\n"))
+        resize.resize_input(filename, w, h)
+
+    if option == 3:
+        transcode.transcode_video(filename)
