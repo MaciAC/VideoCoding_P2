@@ -38,6 +38,7 @@
 
 Choose an option:
   1: Info parser
-  2: Resize video
-  3: Transcode to MPEG1 and MPEG2
+  2: Rename video
+  3: Resize video
+  4: Transcode to MPEG1 and MPEG2
   0: Exit
